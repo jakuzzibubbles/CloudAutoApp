@@ -157,7 +157,7 @@ resource "aws_security_group" "rds_sg" {
 # EC2 Instances
 resource "aws_instance" "web" {
   count = 2
-  ami           = "ami-12345678"  # Replace with a valid AMI ID
+  ami           = "ami-" 
   instance_type = "t2.micro"
   subnet_id     = aws_subnet.public_subnets[count.index].id
   security_groups = [aws_security_group.ec2_sg.name]
