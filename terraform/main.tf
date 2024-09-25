@@ -170,7 +170,7 @@ resource "aws_instance" "web" {
     sudo systemctl start docker
     sudo systemctl enable docker
 
-    git clone https://github.com/yourusername/your-repo.git /home/ubuntu/app
+    git clone https://github.com/jakuzzibubbles/CloudAutoApp.git /home/ubuntu/app
     cd /home/ubuntu/app
     sudo docker build -t python-app .
     sudo docker run -d -p 80:80 python-app
